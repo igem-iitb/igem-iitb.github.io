@@ -206,7 +206,7 @@ const pastIgemMembers = [
    name: 'Arth Agrawal',
    tenure: "Jul' 24 - Nov' 25",
   subsystem: 'iHP',
-  role: 'Human Practises lead',
+  role: 'Human Practices lead',
   image: arth,
   imagePosition: 'center 20%',
   imageZoom: 1.3,
