@@ -30,7 +30,15 @@ import navya from './assets/navya_ex.jpg';
 import arth from './assets/arth_ex.png';
 import { BarChart3, Code2, FlaskConical, Linkedin, Instagram, Users } from "lucide-react";
 import VillagesSection from './components/VillagesSection'
-
+import gallery1 from './assets/gallery_1.png';
+import gallery3 from './assets/gallery_3.png';
+import gallery4 from './assets/gallery_4.png';
+import gallery5 from './assets/gallery_5.png';
+import gallery6 from './assets/gallery_6.png';
+import gallery7 from './assets/gallery_7.png';
+import gallery8 from './assets/gallery_8.png';
+import gallery9 from './assets/gallery_9.png';
+import gallery10 from './assets/gallery_10.png';
 
 const stats = [
   { label: 'Silver Medal', value: 'iGEM 2025' },
@@ -178,6 +186,17 @@ const highlightGallery = [
     alt: 'Ground photo highlight',
     caption: 'Team ground photo highlight.'
   }
+];
+const extraGallery = [
+  { src: gallery1, alt: 'Wet lab in action' },
+  { src: gallery3, alt: 'iGEM medal at Eiffel Tower' },
+  { src: gallery4, alt: 'Team at Synthetic Biology board' },
+  { src: gallery5, alt: 'Laptop group at Jamboree' },
+  { src: gallery6, alt: 'Gold medal in hands' },
+  { src: gallery7, alt: 'iGEM badges wall' },
+  { src: gallery8, alt: 'Team with iGEM mascot' },
+  { src: gallery9, alt: 'Team at AIM IIT Bombay' },
+  { src: gallery10, alt: 'Full team photo' },
 ];
 
 const wetLabHighlights = [wetlab1, wetlab2, wetlab3, wetlab4, wetlab5, wetlab6, wetlab7];
@@ -1262,57 +1281,84 @@ export default function App() {
           </div>
         </section>
 
-        <section className="py-5 md:py-14" id="gallery">
-          <div className="max-w-4xl">
-            <p className="text-sm uppercase tracking-[0.3em] text-accent">Gallery</p>       
-          </div>
-          <div className="mt-8 grid gap-6 lg:grid-cols-2">
-            <figure className="rounded-2xl border border-black/10 bg-white/90 p-4 shadow-soft ">
-              <img
-                src={highlightGallery[0].src}
-                alt={highlightGallery[0].alt}
-                className="h-72 w-full rounded-xl border border-black/10 object-cover transition duration-300 ease-out hover:scale-[1.02]  md:h-96"
-              />
-              <figcaption className="mt-3 text-sm text-muted">{highlightGallery[0].caption}</figcaption>
-            </figure>
-            <figure className="rounded-2xl border border-black/10 bg-white/90 p-4 shadow-soft ">
-              <img
-                src={highlightGallery[1].src}
-                alt={highlightGallery[1].alt}
-                className="h-72 w-full rounded-xl border border-black/10 object-cover transition duration-300 ease-out hover:scale-[1.02] ] md:h-96"
-              />
-              <figcaption className="mt-3 text-sm text-muted">{highlightGallery[1].caption}</figcaption>
-            </figure>
-           
-            <figure className="rounded-2xl border border-black/10 bg-white/90 p-2 shadow-soft lg:col-span-2">
-              <img
-                src={highlightGallery[2].src}
-                alt={highlightGallery[2].alt}
-                className="h-120 w-full rounded-xl border border-black/10 object-cover transition duration-300 ease-out "
-              />
-             
-            </figure>
-             {/* <figure className="rounded-2xl border border-black/10 bg-white/90 p-2 shadow-soft ">
-              <img
-                src={highlightGallery[4].src}
-                alt={highlightGallery[4].alt}
-                className="h-62 w-full rounded-xl border border-black/10 object-cover transition duration-300 ease-out "
-              />
-             
-            </figure>
-             <figure className="rounded-2xl border border-black/10 bg-white/90 p-2 shadow-soft ">
-              <img
-                src={highlightGallery[3].src}
-                alt={highlightGallery[3].alt}
-                className="h-62 w-full rounded-xl border border-black/10 object-cover transition duration-300 ease-out "
-              />
-             
-            </figure>
-             */}
-            
-          </div>
-        
-        </section>
+       <section className="py-5 md:py-14" id="gallery">
+  <div className="max-w-4xl">
+    <p className="text-sm uppercase tracking-[0.3em] text-accent">Gallery</p>
+  </div>
+
+  {/* Row 1: original two hero images */}
+  <div className="mt-8 grid gap-4 lg:grid-cols-2">
+    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
+      <img src={highlightGallery[0].src} alt={highlightGallery[0].alt}
+     className="w-full rounded-xl object-cover object-center aspect-video" />
+    </figure>
+    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
+      <img src={highlightGallery[1].src} alt={highlightGallery[1].alt}
+     className="w-full rounded-xl object-cover object-center aspect-video" />
+    </figure>
+  </div>
+
+  {/* Row 2: original full-width team photo */}
+  <div className="mt-4">
+    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
+      <img src={highlightGallery[2].src} alt={highlightGallery[2].alt}
+      className="w-full rounded-xl object-cover object-center aspect-[2/1]" />
+    </figure>
+  </div>
+
+  {/* Row 3: full-width wide team photo */}
+  <div className="mt-4">
+    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
+      <img src={extraGallery[8].src} alt={extraGallery[8].alt}
+       className="w-full rounded-xl object-cover object-center aspect-[2/1]"  />
+    </figure>
+  </div>
+
+  {/* Row 4: 3 landscape photos */}
+  <div className="mt-4 grid gap-4 lg:grid-cols-3">
+    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
+      <img src={extraGallery[2].src} alt={extraGallery[2].alt}
+        className="w-full rounded-xl object-cover object-center h-56" />
+    </figure>
+    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
+      <img src={extraGallery[3].src} alt={extraGallery[3].alt}
+        className="w-full rounded-xl object-cover object-center h-56" />
+    </figure>
+    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
+      <img src={extraGallery[6].src} alt={extraGallery[6].alt}
+        className="w-full rounded-xl object-cover object-center h-56" />
+    </figure>
+  </div>
+
+  {/* Row 5: portrait photos — let them be natural height in 4 cols */}
+  <div className="mt-4 grid gap-4 grid-cols-2 lg:grid-cols-4">
+    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
+      <img src={extraGallery[0].src} alt={extraGallery[0].alt}
+        className="w-full rounded-xl object-cover object-top h-64" />
+    </figure>
+    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
+      <img src={extraGallery[1].src} alt={extraGallery[1].alt}
+        className="w-full rounded-xl object-cover object-top h-64" />
+    </figure>
+    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
+      <img src={extraGallery[4].src} alt={extraGallery[4].alt}
+        className="w-full rounded-xl object-cover object-center h-64" />
+    </figure>
+    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
+      <img src={extraGallery[5].src} alt={extraGallery[5].alt}
+        className="w-full rounded-xl object-cover object-top h-64" />
+    </figure>
+  </div>
+
+  {/* Row 6: landscape AIM photo full width */}
+  <div className="mt-4">
+    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
+      <img src={extraGallery[7].src} alt={extraGallery[7].alt}
+       className="w-full rounded-xl object-cover object-center aspect-[4/3]" />
+    </figure>
+  </div>
+
+</section>
 
           </>
         )}
