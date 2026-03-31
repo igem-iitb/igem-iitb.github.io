@@ -9,13 +9,13 @@ import hardikaJain from './hardika-jain.png';
 import ishaan from './ishaan.jpg';
 import pratik from './pratik.jpeg';
 import siddhant from './siddhant.jpg';
-import tanish from './tanish.png';
+import tanish from './tanish.jpg';
 import ranit from './ranit.jpg';
 import ekansh from './ekansh.jpg';
 import shinjini from './shinjini.jpg';
 import durva from './durva.jpeg';
 import aarohi from './aaorhi.jpg';
-import yashika from './yashika.jpeg';
+import yashika from './yashika.jpg';
 import latisha from './latisha.jpg'; 
 const memberPhotos = {
   wetLab: {

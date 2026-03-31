@@ -746,7 +746,7 @@ export default function App() {
 </p>
                 <div className="mt-6">
                   <p className="text-xs uppercase tracking-[0.22em] text-accent">Lab Highlights</p>
-                  <div className="mt-3 grid grid-cols-4 gap-3">
+                  <div className="mt-3 grid grid-cols-3 gap-3 lg:grid-cols-4">
                     {wetLabHighlights.map((image, index) => (
                       <img
                         key={`wet-lab-photo-${index + 1}`}
