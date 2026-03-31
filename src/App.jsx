@@ -200,7 +200,7 @@ const pastIgemMembers = [
   subsystem: 'Dry Lab',
   role: 'Modelling and Simulation',
   image: navya,
-  imagePosition: '100% 80%',
+  imagePosition: 'center 80%',
   imageZoom: 1,
   imageHeight: 240,
   linkedin: 'https://www.linkedin.com/in/navya-hissaria-951b79262'
