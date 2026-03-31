@@ -26,6 +26,8 @@ import wetlab6 from './assets/wetlab_6.png';
 import wetlab7 from './assets/wetlab_7.png';
 import profSaket from './assets/profSaket.png';
 import profRajesh from './assets/profRajesh.png';
+import navya from './assets/navya_ex.jpg';
+import arth from './assets/arth_ex.png';
 import { BarChart3, Code2, FlaskConical, Linkedin, Instagram, Users } from "lucide-react";
 import VillagesSection from './components/VillagesSection'
 
@@ -179,6 +181,32 @@ const highlightGallery = [
 ];
 
 const wetLabHighlights = [wetlab1, wetlab2, wetlab3, wetlab4, wetlab5, wetlab6, wetlab7];
+
+const pastIgemMembers = [
+  {
+   name: 'Arth Agrawal',
+   tenure: "Jul' 24 - Nov' 25",
+  subsystem: 'iHP',
+  role: 'Human Practises lead',
+  image: arth,
+  imagePosition: 'center 20%',
+  imageZoom: 1.3,
+  imageHeight: 240,
+  linkedin: 'https://www.linkedin.com/in/arth-agrawal-05998527b/'
+  },
+   {
+   name: 'Navya ',
+   tenure: "May' 24 - Oct' 24",
+  subsystem: 'Dry Lab',
+  role: 'Modelling and Simulation',
+  image: navya,
+  imagePosition: '100% 80%',
+  imageZoom: 1,
+  imageHeight: 240,
+  linkedin: 'https://www.linkedin.com/in/navya-hissaria-951b79262'
+  },
+  
+];
 
 const subsystemData = [
   {
@@ -351,28 +379,40 @@ const subsystemData = [
 const preloadImageSources = Array.from(new Set([
   iitbLogo,
   ...highlightGallery.map((item) => item.src),
-  ...subsystemData.flatMap((item) => item.members.map((member) => member.image))
+  ...subsystemData.flatMap((item) => item.members.map((member) => member.image)),
+  ...pastIgemMembers.map((member) => member.image)
 ].filter(Boolean)));
 
 const getRouteFromHash = () => {
   const hash = window.location.hash.toLowerCase();
   if (!hash.startsWith('#/')) return 'home';
   const route = hash.slice(2);
-  const validRoutes = [...subsystemData.map((item) => item.route)];
+  const validRoutes = [...subsystemData.map((item) => item.route), 'past-members'];
   return validRoutes.includes(route) ? route : 'home';
 };
 
 const wikiMap = ['Project', 'Safety', 'Human Practices', 'Results', 'Contributions', 'Team'];
-const getImageZoom = (zoom) => (Number.isFinite(zoom) ? Math.min(2, Math.max(0.65, zoom)) : 1);
-const getMemberImageStyle = (member) => {
-  const zoom = getImageZoom(member.imageZoom);
-  const isZoomOut = zoom < 1;
-  return {
-    objectPosition: member.imagePosition || 'center center',
-    objectFit: isZoomOut ? 'contain' : 'cover',
-    transform: isZoomOut ? 'scale(1)' : `scale(${zoom})`,
-    transformOrigin: 'center center'
-  };
+
+const clampNumber = (value, min, max, fallback) =>
+  Number.isFinite(value) ? Math.min(max, Math.max(min, value)) : fallback;
+
+const getImageZoom = (zoom) => clampNumber(zoom, 0.6, 2.5, 1);
+const getImageFrameHeight = (height) => clampNumber(height, 120, 340, null);
+const getImageSize = (size, fallback = 112) => clampNumber(size, 72, 220, fallback);
+
+const getMemberImageStyle = (member) => ({
+  objectPosition: member.imagePosition || 'center center',
+  objectFit: member.imageFit || 'cover',
+  transform: `scale(${getImageZoom(member.imageZoom)})`,
+  transformOrigin: 'center center'
+});
+
+const getMemberFrameStyle = (member) => {
+  const customHeight = getImageFrameHeight(member.imageHeight);
+  if (customHeight) {
+    return { height: `${customHeight}px` };
+  }
+  return { aspectRatio: member.imageAspectRatio || '4 / 3' };
 };
 
 export default function App() {
@@ -383,6 +423,7 @@ export default function App() {
   const [route, setRoute] = useState(getRouteFromHash());
   const desktopSubsystemMenuTimerRef = useRef(null);
   const selectedSubsystem = subsystemData.find((item) => item.route === route);
+  const isPastMembersRoute = route === 'past-members';
 
   useEffect(() => {
     const onHashChange = () => setRoute(getRouteFromHash());
@@ -512,6 +553,7 @@ export default function App() {
     { label: 'Achievements', href: '#achievements' },
     { label: 'Wiki', href: '#wiki' },
     { label: 'Subsystems', href: '#subteams', isSubsystemTrigger: true },
+    { label: 'Past Members', href: '#/past-members' },
     { label: 'Events', href: '#events' },
     { label: 'Gallery', href: '#gallery' }
   ];
@@ -522,6 +564,7 @@ export default function App() {
     { label: 'Achievements', href: '#achievements' },
     { label: 'Wiki', href: '#wiki' },
     { label: 'Subsystems', href: '#subteams', isSubsystemTrigger: true },
+    { label: 'Past Members', href: '#/past-members' },
     { label: 'Events', href: '#events' },
     { label: 'Gallery', href: '#gallery' }
   ];
@@ -737,7 +780,63 @@ export default function App() {
       </header>
 
       <main className="mx-auto w-[100vw] flex-1 px-4 pt-20 md:w-[70vw] md:px-6 lg:w-[73vw] lg:pt-24 md:pt-24 lg:pt-28">
-        {selectedSubsystem ? (
+        {isPastMembersRoute ? (
+          <section className="py-10 md:py-12" id="past-members">
+            <div className="max-w-5xl">
+              <p className="text-sm  tracking-[0.3em] text-accent">Past iGEM Members</p>
+              {/* <h2 className="mt-4 font-display text-3xl md:text-4xl">Legacy built by every batch before us.</h2> */}
+              <p className="mt-3 text-sm text-muted md:text-base">
+                We deeply appreciate the dedication, leadership, and hard work of our past members who shaped iGEM IIT Bombay.
+                Their efforts built the foundation, culture, and momentum that continue to guide every new season.
+              </p>
+            </div>
+
+            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {pastIgemMembers.map((member) => (
+                <article key={member.name} className="rounded-2xl border border-black/10 bg-white/90 p-6 shadow-soft">
+                  <div
+                    className="mx-auto overflow-hidden rounded-full border-4 border-[rgba(31,122,140,0.2)] bg-white shadow-soft"
+                    style={{
+                      width: `${getImageSize(member.imageSize, 112)}px`,
+                      height: `${getImageSize(member.imageSize, 112)}px`
+                    }}
+                  >
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="h-full w-full"
+                      style={getMemberImageStyle(member)}
+                    />
+                  </div>
+                  <h3 className="mt-4 text-center font-display text-2xl">{member.name}</h3>
+                  <p className="mt-1 text-center text-sm font-medium text-accent">{member.tenure}</p>
+                  {(member.subsystem || member.role) ? (
+                    <p className="mt-1 text-center text-sm text-muted">
+                      {member.subsystem ? <span>{member.subsystem}</span> : null}
+                      {member.subsystem && member.role ? <span> · </span> : null}
+                      {member.role ? <span>{member.role}</span> : null}
+                    </p>
+                  ) : null}
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full border border-black/10 bg-white/95 px-4 py-2.5 text-sm font-semibold text-accent transition hover:border-[rgba(31,122,140,0.35)] hover:bg-[rgba(31,122,140,0.08)]"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 24 24"
+                      className="h-4 w-4 fill-current"
+                    >
+                      <path d="M22 0H2C.9 0 0 .9 0 2v20c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zM7.2 20.4H3.6V9h3.6v11.4zM5.4 7.4c-1.2 0-2.1-.9-2.1-2.1 0-1.1.9-2.1 2.1-2.1s2.1 1 2.1 2.1c0 1.2-.9 2.1-2.1 2.1zm15 13h-3.6v-5.6c0-1.3 0-3-1.9-3s-2.2 1.5-2.2 2.9v5.7H9.1V9h3.5v1.6h.1c.5-.9 1.7-1.9 3.5-1.9 3.7 0 4.4 2.4 4.4 5.6v6.1z" />
+                    </svg>
+                    <span>View LinkedIn</span>
+                  </a>
+                </article>
+              ))}
+            </div>
+          </section>
+        ) : selectedSubsystem ? (
           <section className="py-10 md:py-12" id={selectedSubsystem.anchorId}>
             {selectedSubsystem.route === 'wet-lab' ? (
               <div className="mb-8 rounded-2xl bg-transparent p-5  md:p-6">
@@ -769,7 +868,10 @@ export default function App() {
                     key={`${selectedSubsystem.route}-${member.name}`}
                     className="rounded-2xl border border-black/10 bg-white p-4 shadow-soft"
                   >
-                    <div className="aspect-[4/3] w-full overflow-hidden rounded-xl border border-black/10 bg-white ">
+                    <div
+                      className="w-full overflow-hidden rounded-xl border border-black/10 bg-white"
+                      style={getMemberFrameStyle(member)}
+                    >
                       {member.image ? (
                         <img
                           src={member.image}
@@ -934,12 +1036,19 @@ export default function App() {
                 className="rounded-2xl border border-black/10 bg-white/90 p-6 shadow-soft"
               >
                 <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:items-start sm:text-left">
-                  <div className="h-28 w-28 shrink-0 overflow-hidden rounded-full border-4 border-[rgba(31,122,140,0.2)] bg-white shadow-soft sm:h-32 sm:w-32">
+                  <div
+                    className="shrink-0 overflow-hidden rounded-full border-4 border-[rgba(31,122,140,0.2)] bg-white shadow-soft"
+                    style={{
+                      width: `${getImageSize(mentor.imageSize, 124)}px`,
+                      height: `${getImageSize(mentor.imageSize, 124)}px`
+                    }}
+                  >
                     {mentor.image ? (
                       <img
                         src={mentor.image}
                         alt={mentor.name}
-                        className="h-full w-full object-cover"
+                        className="h-full w-full"
+                        style={getMemberImageStyle(mentor)}
                       />
                     ) : (
                       <div className="flex h-full w-full items-center justify-center text-2xl font-semibold text-accent">
@@ -1253,6 +1362,7 @@ export default function App() {
                 <a className="block w-fit rounded-md px-1 py-0.5 transition hover:text-ink hover:underline hover:underline-offset-4" href="#project" onClick={(event) => handleNavbarClick(event, '#project')}>Project</a>
                 <a className="block w-fit rounded-md px-1 py-0.5 transition hover:text-ink hover:underline hover:underline-offset-4" href="#achievements" onClick={(event) => handleNavbarClick(event, '#achievements')}>Achievements</a>
                 <a className="block w-fit rounded-md px-1 py-0.5 transition hover:text-ink hover:underline hover:underline-offset-4" href="#subteams" onClick={(event) => handleNavbarClick(event, '#subteams')}>Subsystems</a>
+                <a className="block w-fit rounded-md px-1 py-0.5 transition hover:text-ink hover:underline hover:underline-offset-4" href="#/past-members">Past Members</a>
                 <a className="block w-fit rounded-md px-1 py-0.5 transition hover:text-ink hover:underline hover:underline-offset-4" href="#events" onClick={(event) => handleNavbarClick(event, '#events')}>Events</a>
                 <a className="block w-fit rounded-md px-1 py-0.5 transition hover:text-ink hover:underline hover:underline-offset-4" href="#gallery" onClick={(event) => handleNavbarClick(event, '#gallery')}>Gallery</a>
               </div>
