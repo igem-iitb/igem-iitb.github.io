@@ -285,6 +285,13 @@ const subsystemData = [
           imagePosition: 'center 50%',
             imageZoom: 1,
         },
+         {name: 'Manish S',
+          role: 'Wet Lab Trainee',
+          linkedin: 'http://www.linkedin.com/in/manish-s-6b47663bb',
+          image: memberPhotos.wetLab.manish,
+          imagePosition: 'center 30%',
+            imageZoom: 1.1,
+        },
     ]
   },
   {

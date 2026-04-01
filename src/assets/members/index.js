@@ -20,13 +20,14 @@ import latisha from './latisha.jpg';
 import madhur from './madhur.jpg';
 import arhan from './arhan.jpg';
 import abhinav from './abhinav.jpg';
+import manish from './manish.jpeg';
 const memberPhotos = {
   wetLab: {
     aarohi,
     hardikaJain,
 aayushGupta,
 ranit,
-durva,madhur,abhinav
+durva,madhur,abhinav,manish
 
   },
   dryLab: {
