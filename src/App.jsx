@@ -402,7 +402,8 @@ const subsystemData = [
         role: 'Web Lead',
         linkedin: 'https://www.linkedin.com/in/sagnik-dey-56a2a31b0/',
         image: memberPhotos.webDevelopment.sagnikDey,
-        imagePosition: 'center 35%',
+        imagePosition: 'center 10%',
+        imageZoom: 1,
       },
       {
         name: 'Nisarg Rathod',
