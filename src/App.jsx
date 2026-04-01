@@ -1288,76 +1288,65 @@ export default function App() {
 
   {/* Row 1: original two hero images */}
   <div className="mt-8 grid gap-4 lg:grid-cols-2">
-    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
+    <figure className="rounded-2xl border border-black/10 bg-white/90 p-2 shadow-soft transition-transform duration-300 hover:scale-105">
       <img src={highlightGallery[0].src} alt={highlightGallery[0].alt}
      className="w-full rounded-xl object-cover object-center aspect-video" />
     </figure>
-    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
+    <figure className="rounded-2xl border border-black/10 bg-white/90 p-2 shadow-soft transition-transform duration-300 hover:scale-105">
       <img src={highlightGallery[1].src} alt={highlightGallery[1].alt}
      className="w-full rounded-xl object-cover object-center aspect-video" />
     </figure>
   </div>
 
-  {/* Row 2: original full-width team photo */}
-  <div className="mt-4">
-    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
-      <img src={highlightGallery[2].src} alt={highlightGallery[2].alt}
-      className="w-full rounded-xl object-cover object-center aspect-[2/1]" />
-    </figure>
-  </div>
-
-  {/* Row 3: full-width wide team photo */}
-  <div className="mt-4">
-    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
-      <img src={extraGallery[8].src} alt={extraGallery[8].alt}
-       className="w-full rounded-xl object-cover object-center aspect-[2/1]"  />
-    </figure>
-  </div>
+  
 
   {/* Row 4: 3 landscape photos */}
   <div className="mt-4 grid gap-4 lg:grid-cols-3">
-    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
+    <figure className="rounded-2xl border border-black/10 bg-white/90 p-2 shadow-soft transition-transform duration-300 hover:scale-105">
       <img src={extraGallery[2].src} alt={extraGallery[2].alt}
         className="w-full rounded-xl object-cover object-center h-56" />
     </figure>
-    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
+    <figure className="rounded-2xl border border-black/10 bg-white/90 p-2 shadow-soft transition-transform duration-300 hover:scale-105">
       <img src={extraGallery[3].src} alt={extraGallery[3].alt}
         className="w-full rounded-xl object-cover object-center h-56" />
     </figure>
-    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
-      <img src={extraGallery[6].src} alt={extraGallery[6].alt}
+    <figure className="rounded-2xl border border-black/10 bg-white/90 p-2 shadow-soft transition-transform duration-300 hover:scale-105">
+      <img src={extraGallery[7].src} alt={extraGallery[7].alt}
         className="w-full rounded-xl object-cover object-center h-56" />
     </figure>
   </div>
 
   {/* Row 5: portrait photos — let them be natural height in 4 cols */}
   <div className="mt-4 grid gap-4 grid-cols-2 lg:grid-cols-4">
-    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
-      <img src={extraGallery[0].src} alt={extraGallery[0].alt}
-        className="w-full rounded-xl object-cover object-top h-64" />
-    </figure>
-    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
-      <img src={extraGallery[1].src} alt={extraGallery[1].alt}
-        className="w-full rounded-xl object-cover object-top h-64" />
-    </figure>
-    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
-      <img src={extraGallery[4].src} alt={extraGallery[4].alt}
-        className="w-full rounded-xl object-cover object-center h-64" />
-    </figure>
-    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
-      <img src={extraGallery[5].src} alt={extraGallery[5].alt}
-        className="w-full rounded-xl object-cover object-top h-64" />
-    </figure>
-  </div>
+  
+  <figure className="rounded-2xl border border-black/10 bg-white/90 p-2 shadow-soft transition-transform duration-300 hover:scale-105">
+    <img src={extraGallery[1].src} alt={extraGallery[1].alt}
+      className="w-full rounded-xl object-cover object-top h-64" />
+  </figure>
 
-  {/* Row 6: landscape AIM photo full width */}
+  {/* 👇 This now spans 2 columns */}
+ <figure className="hidden lg:block lg:col-span-2 rounded-2xl border border-black/10 bg-white/90 p-2 shadow-soft transition-transform duration-300 hover:scale-105">
+  <img 
+    src={extraGallery[8].src} 
+    alt={extraGallery[8].alt}
+    className="w-full rounded-xl object-cover object-center h-64" 
+  />
+</figure>
+
+  <figure className=" rounded-2xl border border-black/10 bg-white/90 p-2 shadow-soft transition-transform duration-300 hover:scale-105 ">
+    <img src={extraGallery[4].src} alt={extraGallery[4].alt}
+      className="w-full rounded-xl object-cover object-top h-64" />
+  </figure>
+
+</div>
+
+  {/* Row 2: original full-width team photo */}
   <div className="mt-4">
-    <figure className="rounded-2xl border border-black/10 bg-white/90 p-3 shadow-soft">
-      <img src={extraGallery[7].src} alt={extraGallery[7].alt}
-       className="w-full rounded-xl object-cover object-center aspect-[4/3]" />
+    <figure className="rounded-2xl border border-black/10 bg-white/90 p-2 shadow-soft">
+      <img src={highlightGallery[2].src} alt={highlightGallery[2].alt}
+      className="w-full rounded-xl object-cover object-center aspect-[2/1] " />
     </figure>
   </div>
-
 </section>
 
           </>
