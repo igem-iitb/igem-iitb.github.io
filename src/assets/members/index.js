@@ -17,13 +17,16 @@ import durva from './durva.jpeg';
 import aarohi from './aaorhi.jpg';
 import yashika from './yashika.jpg';
 import latisha from './latisha.jpg'; 
+import madhur from './madhur.jpg';
+import arhan from './arhan.jpg';
+import abhinav from './abhinav.jpg';
 const memberPhotos = {
   wetLab: {
     aarohi,
     hardikaJain,
 aayushGupta,
 ranit,
-durva,
+durva,madhur,abhinav
 
   },
   dryLab: {
@@ -31,7 +34,7 @@ durva,
 ishaan,
 pratik,
 siddhant,
-ekansh
+ekansh,arhan
   },
   humanPracticesDesign: {
     angelSinghvi,
