@@ -21,6 +21,7 @@ import madhur from './madhur.jpg';
 import arhan from './arhan.jpg';
 import abhinav from './abhinav.jpg';
 import manish from './manish.jpeg';
+import arnav from './arnav.jpeg';
 const memberPhotos = {
   wetLab: {
     aarohi,
@@ -40,6 +41,7 @@ ekansh,arhan
   humanPracticesDesign: {
     angelSinghvi,
     yashika,
+    arnav,
     tanish, 
     shinjini,
     latisha
