@@ -1,5 +1,5 @@
 
-import sagnikDey from './sagnik_dey1.png';
+import sagnikDey from './sagnik_dey2.jpeg';
 import nisargRathod from './nisarg-rathod.jpeg';
 import aryanPrasad from './aryan-prasad.jpg';
 import angelSinghvi from './angel-singhvi.jpeg';
