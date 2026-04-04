@@ -1,9 +1,9 @@
 
-import sagnikDey from './sagnik_dey2.jpeg';
-import nisargRathod from './nisarg-rathod.jpeg';
+import sagnikDey from './sagnik_dey2.jpg';
+import nisargRathod from './nisarg-rathod.jpg';
 import aryanPrasad from './aryan-prasad.jpg';
-import angelSinghvi from './angel-singhvi.jpeg';
-import aayushGupta from './aayush-gupta.jpeg';
+import angelSinghvi from './angel-singhvi.jpg';
+import aayushGupta from './aayush-gupta.jpg';
 import bipraBhanu from './bipra-bhanu-mohanty.jpg';
 import hardikaJain from './hardika-jain.png';
 import ishaan from './ishaan.jpg';
@@ -13,15 +13,15 @@ import tanish from './tanish.jpg';
 import ranit from './ranit.jpg';
 import ekansh from './ekansh.jpg';
 import shinjini from './shinjini.jpg';
-import durva from './durva.jpeg';
+import durva from './durva.jpg';
 import aarohi from './aaorhi.jpg';
 import yashika from './yashika.jpg';
 import latisha from './latisha.jpg'; 
 import madhur from './madhur.jpg';
 import arhan from './arhan.jpg';
 import abhinav from './abhinav.jpg';
-import manish from './manish.jpeg';
-import arnav from './arnav.jpeg';
+import manish from './manish.jpg';
+import arnav from './arnav.jpg';
 const memberPhotos = {
   wetLab: {
     aarohi,
