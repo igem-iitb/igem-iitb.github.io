@@ -475,6 +475,7 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [desktopSubsystemMenuOpen, setDesktopSubsystemMenuOpen] = useState(false);
   const [mobileSubsystemMenuOpen, setMobileSubsystemMenuOpen] = useState(false);
+  const [wetLabImageReady, setWetLabImageReady] = useState({});
   const [route, setRoute] = useState(getRouteFromHash());
   const desktopSubsystemMenuTimerRef = useRef(null);
   const selectedSubsystem = subsystemData.find((item) => item.route === route);
@@ -633,6 +634,13 @@ export default function App() {
     { label: 'Visit 2025 Wiki', href: 'https://2025.igem.wiki/iit-bombay/', external: true },
     { label: 'Visit 2024 Wiki', href: 'https://2024.igem.wiki/iit-bombay/', external: true }
   ];
+
+  const markWetLabImageReady = (index) => {
+    setWetLabImageReady((previous) => {
+      if (previous[index]) return previous;
+      return { ...previous, [index]: true };
+    });
+  };
 
   return (
     <div className="relative flex min-h-screen flex-col  overflow-x-hidden">
@@ -900,14 +908,29 @@ export default function App() {
 </p>
                 <div className="mt-6">
                   <p className="text-xs uppercase tracking-[0.22em] text-accent">Lab Highlights</p>
-                  <div className="mt-3 grid grid-cols-3 gap-3 lg:grid-cols-4">
+                  <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
                     {wetLabHighlights.map((image, index) => (
-                      <img
+                      <div
                         key={`wet-lab-photo-${index + 1}`}
-                        src={image}
-                        alt={`Wet lab highlight ${index + 1}`}
-                        className="aspect-square w-full rounded-xl border border-black/10 object-cover shadow-soft"
-                      />
+                        className="relative aspect-square w-full overflow-hidden rounded-xl border border-black/10 bg-[#f6fbff]"
+                      >
+                        {!wetLabImageReady[index] ? (
+                          <div className="absolute inset-0 z-10 flex items-center justify-center bg-white/5">
+                            <span className="h-5 w-5 animate-spin rounded-full border-2 border-accent/20 border-t-accent/60 opacity-40" />
+                          </div>
+                        ) : null}
+                        <img
+                          src={image}
+                          alt={`Wet lab highlight ${index + 1}`}
+                          loading="lazy"
+                          decoding="async"
+                          onLoad={() => markWetLabImageReady(index)}
+                          onError={() => markWetLabImageReady(index)}
+                          className={`h-full w-full object-cover transition-opacity duration-300 ${
+                            wetLabImageReady[index] ? 'opacity-100' : 'opacity-0'
+                          }`}
+                        />
+                      </div>
                     ))}
                   </div>
                 </div>
