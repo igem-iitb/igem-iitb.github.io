@@ -424,8 +424,8 @@ const subsystemData = [
         role: 'Developer Trainee',
         linkedin: 'https://www.linkedin.com/in/aryan-prasad-238391376/',
         image: memberPhotos.webDevelopment.aryanPrasad,
-        imagePosition: 'center 37%',
-        imageZoom: 1,
+        imagePosition: 'center 35%',
+        imageZoom: 1.01,
       },
     ]
   }
