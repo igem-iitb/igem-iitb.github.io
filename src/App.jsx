@@ -34,7 +34,7 @@ import riya from './assets/riya_ex.jpg';
 import prashast from './assets/prashast_ex.jpg';
 import sabarish from './assets/sabarish_ex.jpg';
 import shristi from './assets/shrishti_ex.jpeg';
-import saanvi from './assets/saanvi_ex.JPG';
+import saanvi from './assets/saanvi_ex.jpg';
 import kadambari from './assets/kadambari_ex.jpeg';
 import gaurish from './assets/gaurish_ex.jpg';
 
