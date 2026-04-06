@@ -28,6 +28,17 @@ import profSaket from './assets/profSaket.png';
 import profRajesh from './assets/profRajesh.png';
 import navya from './assets/navya_ex.jpg';
 import arth from './assets/arth_ex.png';
+ import husayn from './assets/husayn_ex.webp';
+ import abdul from './assets/abdul_ex.png';
+import riya from './assets/riya_ex.jpg';
+import prashast from './assets/prashast_ex.JPG';
+import sabarish from './assets/sabarish_ex.jpg';
+import shristi from './assets/shrishti_ex.jpeg';
+import saanvi from './assets/saanvi_ex.JPG';
+import kadambari from './assets/kadambari_ex.jpeg';
+import gaurish from './assets/gaurish_ex.jpg';
+
+
 import { BarChart3, Code2, FlaskConical, Linkedin, Instagram, Users } from "lucide-react";
 import VillagesSection from './components/VillagesSection'
 import gallery1 from './assets/gallery_1.png';
@@ -202,6 +213,47 @@ const extraGallery = [
 const wetLabHighlights = [wetlab1, wetlab2, wetlab3, wetlab4, wetlab5, wetlab6, wetlab7];
 
 const pastIgemMembers = [
+{
+   name: 'Husayn Bootwala ',
+   tenure: "Oct' 23 - Apr' 25",
+  subsystem: 'Team Lead',
+  role: 'Founder',
+  image: husayn,
+  imagePosition: 'center 50%',
+  imageZoom: 1.4,
+  imageHeight: 240,
+  linkedin: 'https://www.linkedin.com/in/husayn-bootwala-558728244'
+  },{
+   name: 'Abdul Qaim Ansar',
+   tenure: "Jan' 24 - Jan' 25",
+  subsystem: 'Team Lead',
+  role: 'Founder',
+  image: abdul,
+  imagePosition: 'center -20%',
+  imageZoom: 1.6,
+  imageHeight: 240,
+  linkedin: 'https://www.linkedin.com/in/abdul-qaim-va003/'
+  },{
+   name: 'Prashast Chitravanshi ',
+   tenure: "Dec' 23 - Nov' 24",
+  subsystem: 'iHP',
+  role: 'Human Practices head',
+  image: prashast,
+  imagePosition: 'center -10%',
+  imageZoom: 1,
+  imageHeight: 240,
+  linkedin: 'https://www.linkedin.com/in/prashast-chitravanshi'
+  },{
+   name: 'Kadambari Bhide',
+   tenure: "Oct' 23 - Nov' 24",
+  subsystem: 'Wetlab',
+   role: 'Founder',
+  image: kadambari,
+  imagePosition: 'center 0%',
+  imageZoom: 1,
+  imageHeight: 240,
+  linkedin: 'https://in.linkedin.com/in/kadambari-bhide-00499b253'
+  },
   {
    name: 'Arth Agrawal',
    tenure: "Jul' 24 - Nov' 25",
@@ -213,6 +265,7 @@ const pastIgemMembers = [
   imageHeight: 240,
   linkedin: 'https://www.linkedin.com/in/arth-agrawal-05998527b/'
   },
+  
    {
    name: 'Navya ',
    tenure: "May' 24 - Oct' 24",
@@ -308,6 +361,13 @@ const subsystemData = [
           image: memberPhotos.dryLab.arhan,
           imagePosition: 'center 0%',
           imageZoom: 1.0,
+        },
+        {name: 'Amritesh Pandey',
+          role: 'Dry Lab Reasearcher',
+          linkedin: 'https://www.linkedin.com/in/amritesh-pandey-85304a316?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+          image: memberPhotos.dryLab.amritesh,
+          imagePosition: 'center 48%',
+          imageZoom: 1.1,
         },
      {name: 'Bipra Bhanu Mohanty',
           role: 'Dry Lab Researcher',
