@@ -31,7 +31,7 @@ import arth from './assets/arth_ex.png';
  import husayn from './assets/husayn_ex.webp';
  import abdul from './assets/abdul_ex.png';
 import riya from './assets/riya_ex.jpg';
-import prashast from './assets/prashast_ex.JPG';
+import prashast from './assets/prashast_ex.jpg';
 import sabarish from './assets/sabarish_ex.jpg';
 import shristi from './assets/shrishti_ex.jpeg';
 import saanvi from './assets/saanvi_ex.JPG';
