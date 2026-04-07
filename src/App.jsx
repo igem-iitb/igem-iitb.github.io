@@ -277,6 +277,49 @@ const pastIgemMembers = [
   imageHeight: 240,
   linkedin: 'https://www.linkedin.com/in/navya-hissaria-951b79262'
   },
+  {
+   name: 'Sabarish S',
+   tenure: " 2024 - 2025",
+  subsystem: 'Dry Lab',
+  role: 'Dry Lab lead',
+  image: sabarish,
+  imagePosition: 'center 20%',
+  imageZoom: 1,
+  imageHeight: 240,
+  linkedin: 'https://www.linkedin.com/in/sabarish-s-iitb'
+  },
+  {
+    name :"Gaurish Khodke",
+    tenure: "Jan' 25 - Nov' 25",
+    subsystem  : 'iHP & Wet Lab',
+    role : "iHP lead",
+    image: gaurish,
+    imagePosition: 'center 0%',
+    imageZoom: 1.2,
+    imageHeight: 240,
+    linkedin: 'https://www.linkedin.com/in/gaurish-khodke/'
+  },
+   {
+   name: 'Shrishti Havaldar',
+   tenure: " 2024 - 2025",
+  subsystem: 'Wetlab & Webdev',
+  role: 'Trainee & Junior dev',
+  image: shristi,
+  imagePosition: 'center 40%',
+  imageZoom: 1.6,
+  imageHeight: 240,
+  linkedin: 'https://www.linkedin.com/in/shrishti-havaldar'
+  },  {
+   name: 'Riya Joglekar',
+   tenure: "Nov' 24 - Nov' 25",
+  subsystem: 'Wetlab',
+  role: 'Wetlab Researcher',
+  image: riya,
+  imagePosition: 'center 20%',
+  imageZoom: 1.2,
+  imageHeight: 240,
+  linkedin: 'https://www.linkedin.com/in/riya-joglekar-28479631a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app '
+  },
   
 ];
 
@@ -363,7 +406,7 @@ const subsystemData = [
           imageZoom: 1.0,
         },
         {name: 'Amritesh Pandey',
-          role: 'Dry Lab Reasearcher',
+          role: 'Dry Lab Researcher',
           linkedin: 'https://www.linkedin.com/in/amritesh-pandey-85304a316?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
           image: memberPhotos.dryLab.amritesh,
           imagePosition: 'center 48%',
