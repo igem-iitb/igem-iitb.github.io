@@ -37,7 +37,8 @@ import shristi from './assets/shrishti_ex.jpeg';
 import saanvi from './assets/saanvi_ex.jpg';
 import kadambari from './assets/kadambari_ex.jpeg';
 import gaurish from './assets/gaurish_ex.jpg';
-
+import nandini from './assets/nandini_ex.jpeg';
+import ramandeep from './assets/ramandeep_ex.jpeg';
 
 import { BarChart3, Code2, FlaskConical, Linkedin, Instagram, Users } from "lucide-react";
 import VillagesSection from './components/VillagesSection'
@@ -254,6 +255,29 @@ const pastIgemMembers = [
   imageHeight: 240,
   linkedin: 'https://in.linkedin.com/in/kadambari-bhide-00499b253'
   },
+   {
+    name :"Ramandeep Singh",
+    tenure: "2024 - 2025",
+    subsystem  : 'Wet Lab',
+    role : "Researcher",
+    image: ramandeep,
+    imagePosition: 'center 0%',
+    imageZoom: 1.2,
+    imageHeight: 240,
+    linkedin: 'https://www.linkedin.com/in/ramandeep-singh-981408279/'
+  },
+  {
+    name :"Nandini Goyal",
+    tenure: "2024 - 2025",
+    subsystem  : 'Dry Lab',
+    role : "Dry Lab Lead",
+    image: nandini,
+    imagePosition: 'center 0%',
+    imageZoom: 1.2,
+    imageHeight: 240,
+    linkedin: 'https://www.linkedin.com/in/nandini-goyal-969bb0302'
+  },
+ 
   {
    name: 'Arth Agrawal',
    tenure: "Jul' 24 - Nov' 25",
@@ -299,6 +323,7 @@ const pastIgemMembers = [
     imageHeight: 240,
     linkedin: 'https://www.linkedin.com/in/gaurish-khodke/'
   },
+  
    {
    name: 'Shrishti Havaldar',
    tenure: " 2024 - 2025",
@@ -309,7 +334,18 @@ const pastIgemMembers = [
   imageZoom: 1.6,
   imageHeight: 240,
   linkedin: 'https://www.linkedin.com/in/shrishti-havaldar'
-  },  {
+  }, 
+   {
+    name: 'Saanvi TS',
+   tenure: "2024 - 2026",
+  subsystem: 'iHP',
+  role: 'iHP lead',
+  image: saanvi,
+  imagePosition: 'center 70%',
+  imageZoom: 1.4,
+  imageHeight: 240,
+  // linkedin: ''
+  }, {
    name: 'Riya Joglekar',
    tenure: "Nov' 24 - Nov' 25",
   subsystem: 'Wetlab',
@@ -320,7 +356,6 @@ const pastIgemMembers = [
   imageHeight: 240,
   linkedin: 'https://www.linkedin.com/in/riya-joglekar-28479631a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app '
   },
-  
 ];
 
 const subsystemData = [
