@@ -480,6 +480,14 @@ const subsystemData = [
           imagePosition: 'center 20%',
           imageZoom: 1.7,
         },
+         {name: 'Gururatna Upadhyay',
+          role: 'Dry Lab Trainee',
+          linkedin: 'https://www.linkedin.com/in/gururatna-upadhyay-389a4a282?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+          image: memberPhotos.dryLab.guru,
+          imagePosition: 'center 20%',
+          imageZoom: 1.2,
+        },
+        
     ]
   },
   {
@@ -548,8 +556,8 @@ const subsystemData = [
         role: 'Web Lead',
         linkedin: 'https://www.linkedin.com/in/sagnik-dey-56a2a31b0/',
         image: memberPhotos.webDevelopment.sagnikDey,
-        imagePosition: 'center 18%',
-        imageZoom: 1.04,
+        imagePosition: 'center 0%',
+        imageZoom: 1.3,
       },
       {
         name: 'Nisarg Rathod',

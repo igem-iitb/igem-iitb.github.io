@@ -1,5 +1,5 @@
 
-import sagnikDey from './sagnik_dey2.jpg';
+import sagnikDey from './sagnik_dey.png';
 import nisargRathod from './nisarg-rathod.jpg';
 import aryanPrasad from './aryan-prasad.jpg';
 import angelSinghvi from './angel-singhvi.jpg';
@@ -23,6 +23,7 @@ import abhinav from './abhinav.jpg';
 import manish from './manish.jpg';
 import arnav from './arnav.jpg';
 import amritesh from './amritesh.jpg';
+import guru from './guru.png';
 
 
 const memberPhotos = {
@@ -39,7 +40,7 @@ durva,madhur,abhinav,manish
 ishaan,
 pratik,
 siddhant,
-ekansh,arhan, amritesh
+ekansh,arhan, amritesh, guru
   },
   humanPracticesDesign: {
     angelSinghvi,
