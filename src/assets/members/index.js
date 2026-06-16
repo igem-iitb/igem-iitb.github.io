@@ -24,6 +24,7 @@ import manish from './manish.jpg';
 import arnav from './arnav.jpg';
 import amritesh from './amritesh.jpg';
 import guru from './guru.png';
+import mitali from './mitali.jpg';
 
 
 const memberPhotos = {
@@ -48,7 +49,8 @@ ekansh,arhan, amritesh, guru
     arnav,
     tanish, 
     shinjini,
-    latisha
+    latisha,
+    mitali
   },
   webDevelopment: {
     sagnikDey,
