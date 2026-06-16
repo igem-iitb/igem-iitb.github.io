@@ -39,6 +39,7 @@ import kadambari from './assets/kadambari_ex.jpeg';
 import gaurish from './assets/gaurish_ex.jpg';
 import nandini from './assets/nandini_ex.jpeg';
 import ramandeep from './assets/ramandeep_ex.jpeg';
+import amritesh from './assets/amritesh.jpg';
 
 import { BarChart3, Code2, FlaskConical, Linkedin, Instagram, Users } from "lucide-react";
 import VillagesSection from './components/VillagesSection'
@@ -355,6 +356,17 @@ const pastIgemMembers = [
   imageZoom: 1.2,
   imageHeight: 240,
   linkedin: 'https://www.linkedin.com/in/riya-joglekar-28479631a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app '
+  },
+   {
+   name: 'Amritesh Pandey',
+   tenure: "2024 - 2025",
+  subsystem: 'Dry Lab',
+  role: 'Dry Lab Researcher',
+  image: amritesh,
+  imagePosition: 'center 40%',
+  imageZoom: 1.4,
+  imageHeight: 240,
+  linkedin: 'https://www.linkedin.com/in/amritesh-pandey-85304a316?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
   },
 ];
 
