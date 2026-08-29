@@ -14,6 +14,7 @@ import poster from './assets/2024_poster.png';
 import aspire from './assets/2024_aspire.png';
 import bioquest from './assets/2025_bioquest.png';
 import aiim from './assets/aiim.png';
+import aiim2026 from './assets/aiiiiiim.jpg';
 import wrcb from './assets/wrcb.png';
 import onePic from './assets/onePic.png';
 import twoPic from './assets/twoPic.png';
@@ -41,7 +42,7 @@ import nandini from './assets/nandini_ex.jpeg';
 import ramandeep from './assets/ramandeep_ex.jpeg';
 import amritesh from './assets/amritesh.jpg';
 
-import { BarChart3, Code2, FlaskConical, Linkedin, Instagram, Users } from "lucide-react";
+import { BarChart3, ChevronDown, Code2, FlaskConical, Image as ImageIcon, Linkedin, Instagram, Undo2, Users } from "lucide-react";
 import VillagesSection from './components/VillagesSection'
 import gallery1 from './assets/gallery_1.png';
 import gallery3 from './assets/gallery_3.png';
@@ -117,6 +118,21 @@ const wikiCards = [
     href: 'https://2024.igem.wiki/iit-bombay/',
     cta: 'Open 2024 Wiki',
     logo: igem2024Image
+  }
+];
+
+const highlightStages = [
+  {
+    label: 'Poster Session',
+    text: 'Interactive discussions at our stall gave us fresh, external perspectives on our design process.'
+  },
+  {
+    label: 'Project Introduction',
+    text: 'We kicked off by outlining our problem statement and bio-engineering approach.'
+  },
+  {
+    label: 'Detailed Judging & Q&A',
+    text: 'We dove into our experimental design, human practices framework, and project thesis. The Q&A session with the panel offered invaluable insights to refine our work moving forward.'
   }
 ];
 
@@ -599,6 +615,7 @@ const subsystemData = [
 
 const preloadImageSources = Array.from(new Set([
   iitbLogo,
+  aiim2026,
   ...highlightGallery.map((item) => item.src),
   ...subsystemData.flatMap((item) => item.members.map((member) => member.image)),
   ...pastIgemMembers.map((member) => member.image)
@@ -643,6 +660,8 @@ export default function App() {
   const [mobileSubsystemMenuOpen, setMobileSubsystemMenuOpen] = useState(false);
   const [wetLabImageReady, setWetLabImageReady] = useState({});
   const [route, setRoute] = useState(getRouteFromHash());
+  const [storyOpen, setStoryOpen] = useState(false);
+  const [flippedAchievements, setFlippedAchievements] = useState({});
   const desktopSubsystemMenuTimerRef = useRef(null);
   const selectedSubsystem = subsystemData.find((item) => item.route === route);
   const isPastMembersRoute = route === 'past-members';
@@ -1357,6 +1376,144 @@ export default function App() {
 
           </div>
         </section>
+        <section className="pt-5 md:pt-14" id="recent-highlight">
+          <div className="flex items-center gap-4">
+            <p className="whitespace-nowrap text-sm uppercase tracking-[0.3em] text-accent">Recent Highlight</p>
+            <span aria-hidden="true" className="h-px flex-1 bg-black/10" />
+          </div>
+          <h2 className="mt-4 font-display text-3xl leading-tight md:text-4xl lg:text-5xl">
+            Best iHP and Best Overall Team at AIIM 2026
+          </h2>
+
+          <article className="mt-8 overflow-hidden rounded-3xl border border-black/10 bg-white/90 shadow-soft">
+            <div className="border-b border-black/10 bg-gradient-to-br from-[rgba(31,122,140,0.12)] via-white to-[rgba(226,160,83,0.12)] p-3 md:p-4">
+              <div
+                className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-soft"
+                style={{ aspectRatio: '1120 / 768' }}
+              >
+                <img
+                  src={aiim2026}
+                  alt="Team iGEM IIT Bombay with the Best iHP and Best Overall Team awards at AIIM 2026, IIT Madras"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="p-6 md:p-8">
+              <p className="font-display text-xl italic leading-snug text-ink md:text-2xl">
+                Team iGEM IIT Bombay secured both the Best Integrated Human Practices (iHP) and Best Overall Team
+                Awards at AIIM 2026, hosted by IIT Madras.
+              </p>
+              <p className="mt-4 text-sm text-muted md:text-base">
+                Throughout the meet, we presented our bio-engineering approach across poster sessions, project
+                introductions, and rigorous judging Q&amp;As, receiving invaluable feedback to sharpen our research.
+              </p>
+              <p className="mt-3 text-sm text-muted md:text-base">
+                We extend our deepest gratitude to our mentors Prof. Saket Choudhary, Prof. Rajesh Patkar, WITC, and
+                the organizing team at IIT Madras as we carry this momentum forward to the iGEM Grand Jamboree!
+              </p>
+
+              <div className="mt-6 h-px bg-black/10" />
+
+              <button
+                type="button"
+                aria-expanded={storyOpen}
+                aria-controls="aiim-2026-story"
+                onClick={() => setStoryOpen((open) => !open)}
+                className="group mt-4 inline-flex items-center gap-3 rounded-full text-accent transition hover:text-ink"
+              >
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[rgba(31,122,140,0.12)] transition group-hover:bg-[rgba(31,122,140,0.22)]">
+                  <ChevronDown
+                    className={`h-4 w-4 transition-transform duration-500 ${storyOpen ? 'rotate-180' : ''}`}
+                    strokeWidth={2.2}
+                  />
+                </span>
+                <span className="text-base font-semibold">
+                  {storyOpen ? 'Hide the full story' : 'Read the full story'}
+                </span>
+              </button>
+
+              <div className={`story-collapse ${storyOpen ? 'is-open' : ''}`} id="aiim-2026-story">
+                <div className="min-h-0 overflow-hidden">
+                  <div className="pt-6">
+                    <h3 className="font-display text-2xl leading-tight md:text-3xl">
+                      Triumph at AIIM 2026: Team iGEM IIT Bombay Brings Home Top Honors!
+                    </h3>
+                    <p className="mt-4 text-sm text-muted md:text-base">
+                      Science thrives on collaboration, critical questioning, and the shared drive to solve complex
+                      real-world problems.
+                    </p>
+                    <p className="mt-3 text-sm text-muted md:text-base">
+                      At the <em>All India iGEM Meet (AIIM) 2026, hosted by IIT Madras</em>, synbio teams from across
+                      the nation gathered to exchange ideas, present research, and innovate together. We are beyond
+                      thrilled to announce that{' '}
+                      <strong className="font-semibold text-ink">
+                        Team iGEM IIT Bombay was awarded both the Best Integrated Human Practices (iHP) Award and the
+                        Best Overall Team Award!
+                      </strong>
+                    </p>
+
+                    <div className="mt-6 h-px bg-black/10" />
+
+                    <h4 className="mt-6 font-display text-xl md:text-2xl">Showcasing Our Work</h4>
+                    <p className="mt-3 text-sm text-muted md:text-base">
+                      Throughout the meet, our team engaged with participants, judges, and mentors across multiple
+                      stages:
+                    </p>
+                    <ul className="mt-3 space-y-2.5">
+                      {highlightStages.map((stage) => (
+                        <li key={stage.label} className="flex gap-3 text-sm text-muted md:text-base">
+                          <span
+                            aria-hidden="true"
+                            className="mt-[0.6em] h-1.5 w-1.5 flex-none rounded-full bg-accent"
+                          />
+                          <span>
+                            <span className="font-semibold text-ink">{stage.label}:</span> {stage.text}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="mt-6 h-px bg-black/10" />
+
+                    <h4 className="mt-6 font-display text-xl md:text-2xl">Looking Ahead</h4>
+                    <p className="mt-3 text-sm text-muted md:text-base">
+                      Winning <span className="font-semibold text-ink">Best iHP</span> and{' '}
+                      <span className="font-semibold text-ink">Best Overall Team</span> is a huge validation of the
+                      countless hours our team has poured into wet-lab testing, modeling, and stakeholder engagement.
+                      Integrated Human Practices sits at the core of our work&mdash;ensuring our synthetic biology
+                      solutions are safe, responsible, and aligned with real-world needs.
+                    </p>
+                    <p className="mt-3 text-sm text-muted md:text-base">
+                      Beyond the trophies, AIIM 2026 reminded us of what makes the iGEM community special: learning,
+                      building, and growing together.
+                    </p>
+
+                    <h4 className="mt-6 font-display text-xl md:text-2xl">Heartfelt Thanks</h4>
+                    <p className="mt-3 text-sm text-muted md:text-base">
+                      A massive thank you to our faculty advisors,{' '}
+                      <span className="font-semibold text-ink">Prof. Saket Choudhary</span> and{' '}
+                      <span className="font-semibold text-ink">Prof. Rajesh Patkar</span>, as well as the{' '}
+                      <span className="font-semibold text-ink">
+                        Wadhwani Innovation &amp; Translation Centre (WITC)
+                      </span>{' '}
+                      at IIT Bombay for their constant mentorship and support.
+                    </p>
+                    <p className="mt-3 text-sm text-muted md:text-base">
+                      We also extend our gratitude to <span className="font-semibold text-ink">IIT Madras</span> for
+                      hosting a fantastic event, the judges for their feedback, and all participating teams for the
+                      inspiring discussions.
+                    </p>
+                    <p className="mt-3 text-sm text-muted md:text-base">
+                      We return to the lab with fresh energy, sharper models, and high momentum as we head toward the
+                      iGEM Grand Jamboree!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
         <section className="pt-5 md:pt-14" id="achievements">
           <div className="max-w-4xl">
             <p className="text-sm uppercase tracking-[0.3em] text-accent">Achievements</p>
@@ -1365,17 +1522,35 @@ export default function App() {
           <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {achievements.map((item) => {
   const hasImage = Boolean(item.image);
+  const isFlipped = Boolean(flippedAchievements[item.title]);
+  const toggleFlip = () =>
+    setFlippedAchievements((current) => ({ ...current, [item.title]: !current[item.title] }));
   return (
-<div key={item.title} className={`${hasImage ? 'flip-card perspective' : ''} h-[17rem] md:h-[18rem]`}>
+<div key={item.title} className={`${hasImage ? `flip-card perspective${isFlipped ? ' is-flipped' : ''}` : ''} h-[17rem] md:h-[18rem]`}>
   <div className={hasImage ? 'flip-inner' : 'h-full'}>
 
     {/* FRONT */}
-    <div className={`${hasImage ? 'flip-front' : 'h-full'} rounded-2xl border border-black/10 bg-white/90 p-6 shadow-soft`}>
-      <span className="inline-flex rounded-full bg-[rgba(31,122,140,0.12)] px-3 py-1 text-sm font-semibold text-accent">
-        {item.year}
-      </span>
-      <h3 className="mt-3 font-display text-xl leading-tight">{item.title}</h3>
-      <p className="achievement-text mt-2 text-sm text-muted">{item.text}</p>
+    <div className={`${hasImage ? 'flip-front' : 'h-full'} flex flex-col rounded-2xl border border-black/10 bg-white/90 p-6 shadow-soft`}>
+      <div className="min-h-0 flex-1 overflow-hidden">
+        <span className="inline-flex rounded-full bg-[rgba(31,122,140,0.12)] px-3 py-1 text-sm font-semibold text-accent">
+          {item.year}
+        </span>
+        <h3 className="mt-3 font-display text-xl leading-tight">{item.title}</h3>
+        <p className="achievement-text mt-2 text-sm text-muted">{item.text}</p>
+      </div>
+      {hasImage ? (
+        <div className="mt-3 flex justify-end">
+          <button
+            type="button"
+            onClick={toggleFlip}
+            aria-label={`Show photo for ${item.title}`}
+            className="flip-toggle group/flip relative flex h-7 w-7 items-center justify-center rounded-full border border-[rgba(31,122,140,0.25)] bg-[rgba(31,122,140,0.10)] text-accent transition hover:bg-accent hover:text-white"
+          >
+            <ImageIcon className="h-3.5 w-3.5" strokeWidth={2} />
+            <span className="flip-tip">Click to see pic</span>
+          </button>
+        </div>
+      ) : null}
     </div>
 
     {/* BACK */}
@@ -1386,6 +1561,17 @@ export default function App() {
           alt={item.title}
           className="h-full w-full rounded-2xl object-cover"
         />
+        <div className="absolute bottom-3 right-3">
+          <button
+            type="button"
+            onClick={toggleFlip}
+            aria-label={`Back to details for ${item.title}`}
+            className="flip-toggle group/flip relative flex h-7 w-7 items-center justify-center rounded-full border border-black/10 bg-white/90 text-accent shadow-soft backdrop-blur transition hover:bg-accent hover:text-white"
+          >
+            <Undo2 className="h-3.5 w-3.5" strokeWidth={2} />
+            <span className="flip-tip">Click to go back</span>
+          </button>
+        </div>
       </div>
     ) : null}
 
