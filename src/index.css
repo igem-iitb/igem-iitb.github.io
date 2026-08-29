@@ -69,11 +69,11 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 1.2s;
+  transition: transform 0.8s;
   transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-inner {
+.flip-card.is-flipped .flip-inner {
   transform: rotateY(180deg);
 }
 
@@ -97,22 +97,48 @@ body {
   -webkit-box-orient: vertical;
 }
 
-@media (max-width: 1024px), (hover: none), (pointer: coarse) {
-  .perspective {
-    perspective: none !important;
-  }
+/* Tiny flip toggle + its hover hint */
+.flip-tip {
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
+  right: 0;
+  white-space: nowrap;
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #465466;
+  box-shadow: 0 10px 24px rgba(26, 36, 52, 0.14);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
 
-  .flip-inner {
-    transform: none !important;
-    transform-style: flat !important;
-    transition: none !important;
-  }
+.flip-toggle:hover .flip-tip,
+.flip-toggle:focus-visible .flip-tip {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-  .flip-card:hover .flip-inner {
-    transform: none !important;
-  }
+/* "Read the full story" expand/collapse */
+.story-collapse {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s ease;
+}
 
-  .flip-back {
-    display: none !important;
+.story-collapse.is-open {
+  grid-template-rows: 1fr;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flip-inner,
+  .story-collapse,
+  .flip-tip {
+    transition: none;
   }
 }
